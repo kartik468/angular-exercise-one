@@ -1,0 +1,27 @@
+<div class="users-conainer row">
+  <div class="users col">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Username</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="users">
+        <tr *ngFor="let user of users">
+          <th scope="row">
+            <a (click)="onUserIdClick(user.id)">{{ user.id }}</a>
+          </th>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="user col">
+    <router-outlet></router-outlet>
+  </div>
+</div>
