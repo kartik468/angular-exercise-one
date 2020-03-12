@@ -15,7 +15,7 @@ export class MaxLengthDirective implements OnInit {
     this.setValidity(value);
   }
 
-  setValidity(value) {
+  setValidity(value: string) {
     this.invalid = value.length > this.maxLength ? true : false;
   }
 
